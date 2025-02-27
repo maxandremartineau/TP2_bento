@@ -108,3 +108,7 @@ h1 {
 
 /* Grille de mise en page
    ========================================================================== */
+.block {
+    display: flex;
+    flex-direction: column;
+}
