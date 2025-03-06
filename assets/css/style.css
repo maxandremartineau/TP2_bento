@@ -109,6 +109,86 @@ h1 {
 /* Grille de mise en page
    ========================================================================== */
 .block {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+}
+.block1{
+    background: #7145d2;
+    color: #fff;
+    text-align: center;
+    border-radius: 12px;
+}
+.block1 h1{
+    font-size: 5.5rem;
+    margin: 0;
+
+}
+.block2{
+    background: #f7f7f7;
+    color: #000;
+    text-align: center;
+    border-radius: 12px;    
+}
+.block3{
+    background: #ffc668;
+    border-radius: 12px;
+
+}
+.block4{
+    background: #fff;
+    color: #000;
+    border-radius: 12px;
+}
+.block5{
+    background: #7145d2;
+    color: #fff;
+    border-radius: 12px;
+}
+.block6{
+    background: #fff;
+    color: #000;
+    border-radius: 12px;
+}
+.block7{
+    background: #f9ebde;
+    border-radius: 12px;
+}
+.block8{
+    background: #ffc668;
+    border-radius: 12px;
+}
+.container{
+    background: #f3f3f3;
+}
+
+@media (min-width: 600px){
+    .block{
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+        grid-template-rows: minmax(300px, auto) minmax(100px, auto) minmax(100px, auto) minmax(200px, auto);
+        grid-template-areas: "block7 block1 block1 block4" "block7 block2 block3 block4" "block8 block2 block3 block4" "block8 block5 block6 block6";
+        gap: 2rem;
+    }
+    .block1 { 
+        grid-area: 1 / 2 / 2 / 4; 
+    }
+    .block2 { 
+        grid-area: 2 / 2 / 4 / 3; 
+    }
+    .block3 { 
+        grid-area: 2 / 3 / 4 / 4; 
+    }
+    .block4 { 
+        grid-area: 1 / 4 / 4 / 5; 
+    }
+    .block5 { 
+        grid-area: 4 / 3 / 5 / 5; 
+    }
+    .block7 { 
+        grid-area: 1 / 1 / 3 / 2; 
+    }
+    .block8 {
+        grid-area: 3 / 1 / 5 / 2;
+    }
 }
